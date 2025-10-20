@@ -1,0 +1,522 @@
+/* ⬇️ AÑADE ESTO AL INICIO DE TODO ⬇️ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* 🔹 Estilo base */
+/* ⬇️ AÑADIDO: Scroll suave al hacer click en los links del menú */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Animación de Scroll --- */
+.animate-on-scroll {
+  opacity: 0; /* Empieza oculto */
+  transform: translateY(30px); /* Empieza 30px más abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+body {
+  background-image: url('uss.jpg'); /* Imagen de fondo */
+  background-size: cover; /* Cubre toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen para que no se mueva con el scroll */
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  transition: color 0.3s, color 0.3s;
+  position: relative;
+  z-index: 1;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Títulos en negrita */
+}
+
+/* 🔹 Filtro para el fondo (Añade esto al final de tu CSS) */
+body::before {
+  content: ''; /* Obligatorio para un pseudo-elemento */
+  position: fixed; /* Fijo, igual que el fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Por defecto (modo claro) es casi transparente */
+  
+  
+  transition: background-color 0.3s;
+  
+  /* Se pone detrás del contenido (z-index: 1) pero encima del body (z-index: -1) */
+  z-index: -1; 
+}
+
+/* ⬇️ AÑADIDO: Estilo general para centrar el contenido */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ⬇️ AÑADIDO: Estilo general para todas las secciones */
+section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* 🔹 Header (Tu código original) */
+header {
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky; /* ⬇️ AÑADIDO: Header pegajoso */
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ⬇️ AÑADIDO: Efecto hover en el menú */
+nav a:hover {
+  color: #ddd;
+}
+
+.btn-small {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* 🔹 Modales (Tu código original - está perfecto) */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 18px; /* ⬇️ CAMBIADO: Un poco más grande */
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===============================================
+⬇️⬇️ SECCIÓN AÑADIDA: ESTILOS DEL CONTENIDO ⬇️⬇️
+===============================================
+*/
+
+/* 🔹 Hero (Banner principal) */
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x800.png?text=Imagen+de+Fondo');
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* REGLA 1 */
+#hero h1 {
+ font-size: 3em;
+}
+
+/* REGLA 2 (SEPARADA) */
+.img-container { 
+  text-align:center; 
+}
+
+.btn-hero {
+  background: #fff;
+  color: #333;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Sección "About" (Descripción) */
+#about .container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
+}
+
+#about .img-container {
+  flex: 1;
+  background: #ccc;
+  min-height: 250px;
+  border-radius: 10px;
+}
+
+#about .img-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#about .text-container {
+  flex: 2;
+}
+
+
+/* 🔹 Secciones ODS y Carrera (Tarjetas) */
+.cartas-container {
+  display: flex; /* Pone las tarjetas una al lado de la otra */
+  justify-content: center;
+  flex-wrap: wrap; /* Si no caben, se van abajo */
+  gap: 20px; /* Espacio entre tarjetas */
+  margin-top: 30px;
+}
+
+.carta {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px; /* Ancho fijo para cada tarjeta */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra más suave */
+  transition: transform 0.3s, box-shadow 0.3s; /* Añadimos transición */
+}
+
+/* Efecto al pasar el mouse */
+.carta:hover {
+  transform: translateY(-5px); /* Se eleva un poco */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Sombra más pronunciada */
+}
+
+.carta ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* 🔹 Sección Equipo (Nosotros) */
+.bg-light {
+  background: #fff;
+}
+.text-center {
+  text-align: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-muted {
+  color: #6c757d;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.col-lg-4 {
+  width: 300px; /* Ancho de cada miembro */
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #eee;
+}
+
+.btn-social {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.btn-social:hover {
+  background: #555;
+}
+
+/* 🔹 Sección Contacto (Formulario) */
+#contactForm {
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+
+#contactForm .row {
+  gap: 20px;
+}
+
+.col-md-6 {
+  flex: 1; /* Ocupa la mitad del espacio */
+  min-width: 300px; /* Ancho mínimo antes de saltar de línea */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 95%;
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group-textarea textarea {
+  height: 150px;
+  resize: vertical; /* Permite al usuario cambiar la altura */
+}
+
+.btn-primary {
+  background: #333;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 15px 30px;
+}
+
+/* 🔹 Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+
+/* 🔹 Modo oscuro (Tu código original + mejoras) */
+.dark-mode {
+  background: #1a1a1a;
+  color: #f4f4f4;
+}
+
+.dark-mode header {
+  background: #111;
+}
+
+/* ⬇️ AÑADIDO: Estilos oscuros para las secciones nuevas */
+.dark-mode .modal-content,
+.dark-mode .carta,
+.dark-mode .bg-light {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.dark-mode .form-control {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark-mode .btn-hero {
+  background: #333;
+  color: #fff;
+}
+
+/* Estilo para el link activo del menú */
+nav a.active {
+  color: #a0cff0; /* Un color celeste o el que prefieras */
+}
+
+/* Estilo del botón "Volver Arriba" */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+#scrollTopBtn.hidden {
+  opacity: 0;
+  pointer-events: none; /* No se puede clickear si está oculto */
+}
+
+.dark-mode #scrollTopBtn {
+  background: #555;
+  color: #fff;
+}
+
+/* 🌙 Estilo del interruptor de Modo Oscuro */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Ancho total del interruptor */
+    height: 30px; /* Alto total del interruptor */
+    margin-left: 15px; /* Separación del menú */
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.toggle-checkbox {
+    display: none; /* Oculta el checkbox nativo */
+}
+
+.toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc; /* Color de fondo cuando está en modo claro */
+    border-radius: 15px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5px; /* Espacio para los íconos */
+}
+
+.toggle-ball {
+    position: absolute;
+    width: 26px; /* Tamaño de la "bola" */
+    height: 26px; /* Tamaño de la "bola" */
+    background-color: #fff;
+    border-radius: 50%; /* Bola perfectamente redonda */
+    top: 2px; /* Centrado vertical */
+    left: 2px; /* Posición inicial (modo claro) */
+    transition: transform 0.3s; /* Animación de movimiento */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle-icon {
+    font-size: 1.2em;
+    position: absolute;
+    color: #fff; /* Color de los íconos */
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.toggle-icon.sun {
+    left: 8px; /* Posición del sol */
+    opacity: 1; /* Visible por defecto */
+    color: #f7d242; /* Color del sol */
+}
+
+.toggle-icon.moon {
+    right: 8px; /* Posición de la luna */
+    opacity: 0; /* Oculta por defecto */
+    color: #e0e0e0; /* Color de la luna */
+}
+
+/* Estado cuando el checkbox está 'checked' (Modo Oscuro activado) */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #555; /* Fondo en modo oscuro */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px); /* Mueve la bola hacia la derecha */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-icon.sun {
+    opacity: 0; /* Oculta el sol */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-icon.moon {
+    opacity: 1; /* Muestra la luna */
+}
+
+/* Estilos para el modo oscuro general */
+body.dark-mode .toggle-label {
+    background-color: #555;
+}
+body.dark-mode .toggle-icon.sun {
+    opacity: 0;
+}
+body.dark-mode .toggle-icon.moon {
+    opacity: 1;
+}

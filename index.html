@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Herramientas Digitales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Portafolio Herramientas Digitales</div>
+            <nav>
+                <a href="#hero">HOME</a>
+                <a href="#ODS">ODS</a>
+                <a href="#Carrera">CARRERA</a>
+                <a href="#NOSOTROS">NOSOTROS</a>
+                <a href="#contact">CONTACT</a>
+                <button id="loginBtn" class="btn-small">🔑 Login</button>
+                <div id="darkModeToggle" class="toggle-switch btn-small">
+                    <input type="checkbox" id="theme-switch" class="toggle-checkbox" />
+                    <label for="theme-switch" class="toggle-label">
+                        <i class="fas fa-sun toggle-icon sun"></i>
+                        <i class="fas fa-moon toggle-icon moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+     <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Aceso al Portafolio</h2>
+      <form id="loginForm">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" required />
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginMsg"></p>
+      <a href="#" id="registerLink">Registrarse</a> |
+      <a href="#" id="forgotLink">¿Olvidaste tu contraseña?</a>
+    </div>
+  </div>
+
+  <!-- Registro Modal -->
+  <div id="registerModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Registro</h2>
+      <form id="registerForm">
+        <label for="newUser">Nuevo Usuario</label>
+        <input type="text" id="newUser" required />
+
+        <label for="newPass">Contraseña</label>
+        <input type="password" id="newPass" required />
+
+        <button type="submit">Registrarse</button>
+      </form>
+      <p id="registerMsg"></p>
+    </div>
+  </div>
+
+  <!--Recuperar contraseña Modal -->
+  <div id="forgotModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Recuperar Contraseña</h2>
+      <form id="forgotForm">
+        <label for="recoverUser">Usuario</label>
+        <input type="text" id="recoverUser" required />
+        <button type="submit">Recuperar</button>
+      </form>
+      <p id="forgotMsg"></p>
+    </div>
+  </div>
+
+  <!-- Bienvenida Modal -->
+  <div id="welcomeModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>🎉 Bienvenido</h2>
+      <p id="welcomeUser"></p>
+      <button id="logoutBtn">Cerrar Sesión</button>
+    </div>
+  </div>
+
+    <section id="hero">
+        <a href="#hero" id="scrollTopBtn" class="hidden">⬆️</a>
+        <h1>Bienvenido al portafolio <br> GRUPO 9</h1>
+        <a href="#about" class="btn-hero">¡VAMOS!</a>
+
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="img-container">
+                <img src="uss.jpg" alt="Imagen descriptiva del trabajo">
+            </div>
+            <div class="text-container"></div>
+            <h2>Descripcion del trabajo</h2>
+            <p>La arquitectura contemporánea se redefine a través de la innovación digital, integrando herramientas como el Modelado de Información de Construcción (BIM), la simulación energética avanzada y la fabricación aditiva. Estas tecnologías son fundamentales para optimizar el rendimiento de los edificios, permitiendo a los diseñadores evaluar con precisión el impacto ambiental de los materiales, reducir el consumo de recursos y planificar estructuras que se adapten de manera eficiente a su entorno, sentando las bases de un diseño verdaderamente sostenible y de alto rendimiento. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ODS">
+        <div class="container">
+            <h2>NUESTROS OBJETIVOS</h2>
+            <div class="cartas-container">
+                
+                <div class="carta animated-on-scroll">
+                    <h3>Primer objetivo</h3>
+                    <h4>ODS 9: Industria, Innovación e Infraestructura</h4>
+                    <p>Promover la innovación tecnológica y la infraestructura sostenible mediante el uso de herramientas digitales (como el modelado BIM o la simulación energética) que optimicen los recursos y reduzcan el impacto ambiental en la arquitectura.</p>
+                    <button>+ Info</button>
+                </div>
+                <div class="carta animated-on-scroll">
+                    <h3>Segundo objetivo</h3>
+                    <h4>ODS 11: Ciudades y Comunidades Sostenibles</h4>
+                    <p>Fomentar el desarrollo urbano sostenible y la planificación inclusiva mediante el uso de tecnologías digitales que mejoren la calidad de vida en las ciudades y reduzcan su huella ecológica.</p>
+                    <button>+ Info</button>
+                </div>
+                <div class="carta animated-on-scroll">
+                    <h3>tercer objetivo</h3>
+                    <h4>ODS 12: Producción y Consumo Responsables</h4>
+                    <p>Garantizar modalidades de consumo y producción sostenibles mediante la implementación de prácticas de diseño eficiente y el uso de materiales reciclables en la arquitectura.</p>
+                    <button>+ Info</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="carrera">
+        <div class="container">
+            <div class="cartas-container">
+                <div class="carta">
+                <h4>Presentacion</h4>
+                <ul>
+                    <li>✅​ Universidad señor de sipan</li>
+                    <h4>-Escuela Profesional: </h4>
+                    <li>✅​ Ingenieria de Sistemas</li>
+                    <p>La Ingeniería de Sistemas se enfoca en el diseño, implementación y gestión de sistemas complejos, integrando tecnología y procesos para mejorar la eficiencia y efectividad organizacional.</p>
+                    <li>✅​ Arquitectura</li>
+                    <p>La Arquitectura se centra en el diseño y planificación de espacios construidos, considerando aspectos estéticos, funcionales y sostenibles para crear entornos habitables y eficientes.</p>
+                </ul>
+                </div>
+            </div>
+            <div class="carta">
+                <!--ubo algo aqui-->
+                <h4>Mision</h4>
+                <p>Contribuir al desarrollo sostenible y la innovación en la arquitectura y la ingeniería mediante la formación de profesionales competentes y el uso de tecnologías avanzadas.</p>
+                
+            </div>
+            <div class="carta">
+                <!--ubo algo aqui-->
+                <h4>Vision</h4>
+                <p>Ser líderes en la formación de profesionales en arquitectura e ingeniería, promoviendo la innovación y el uso responsable de la tecnología para el desarrollo sostenible.</p>
+                
+            </div>
+            <div class="carta">
+                <!--ubo algo aqui-->
+                <h4>Valores</h4>
+                <ul>
+                    <li>✅ Excelencia</li>
+                    <li>✅ Perseverancia</li>
+                    <li>✅ Servicio</li>
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+
+   <section class="page-section bg-light" id="NOSOTROS">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Equipo de trabajo</h2>
+                    <h3 class="section-subheading text-muted">Desarrollo del portafolio con fines académicos</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 animated-on-scroll">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="alvaro oficial.jpeg" alt="..." />
+                            <h4>Alvaro Hernandez</h4>
+                            <p class="text-muted">Ing Sistemas</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://x.com/" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/feed/" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 animated-on-scroll">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="ivenka oficial.png" alt="..." />
+                            <h4>Ivenka Coronel</h4>
+                            <p class="text-muted">Arquitectura</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://x.com/" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/feed/" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 animated-on-scroll">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="omar1.png" alt="..." />
+                            <h4>Omar Tapia</h4>
+                            <p class="text-muted">Ing Sistemas</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://x.com/" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/feed/" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Denus un aporte de mejora</h3>
+                </div>
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Tu Nombre *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Tu Correo *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Tu Telefono *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Tu mensaje *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTsU8SGQgdQsnI_Mvetc3nm8Y-bPCo-Zihr4WtOv8r1Z1dFw/viewform?usp=dialog">https://docs.google.com/forms/d/e/1FAIpQLSfTsU8SGQgdQsnI_Mvetc3nm8Y-bPCo-Zihr4WtOv8r1Z1dFw/viewform?usp=dialog</a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        <section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Portafolio Digital | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
